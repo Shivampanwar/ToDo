@@ -45,6 +45,20 @@ public class DetailListFragment extends Fragment{
         updateUI();
         return view;
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("Called","On destroy");
+    }
+
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("called","On pause");
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         DatabaseHandler db = new DatabaseHandler(getActivity());
